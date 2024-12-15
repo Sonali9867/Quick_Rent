@@ -1,0 +1,519 @@
+:root {
+    /* Pastel Blue Color Palette */
+    --primary-color: #6495ED;      /* Cornflower Blue */
+    --secondary-color: #B0E0E6;    /* Powder Blue */
+    --accent-color: #87CEFA;       /* Light Sky Blue */
+    --background-color: #F0F8FF;   /* Alice Blue */
+    --text-primary: #2C3E50;       /* Dark Blue-Gray */
+    --text-secondary: #34495E;     /* Slightly Lighter Blue-Gray */
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--background-color);
+}
+
+/* Navbar Styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: var(--white);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo img {
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-buttons .btn-signup,
+.nav-buttons .btn-login {
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-signup {
+    background-color: var(--primary-color);
+    color: var(--white);
+    box-shadow: 0 4px 6px rgba(100, 149, 237, 0.3);
+}
+
+.btn-login {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-signup:hover {
+    background-color: var(--accent-color);
+    box-shadow: 0 6px 8px rgba(100, 149, 237, 0.4);
+}
+
+.btn-login:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 6rem 5%;
+    background: linear-gradient(135deg, var(--background-color), var(--secondary-color));
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 3rem;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 1rem;
+}
+
+.hero-cta .btn-primary,
+.hero-cta .btn-secondary {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+    box-shadow: 0 5px 15px rgba(100, 149, 237, 0.4);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--text-secondary);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+.btn-secondary:hover {
+    background-color: var(--white);
+    border: 2px solid var(--primary-color);
+}
+
+.hero-image {
+    flex: 1;
+    text-align: right;
+}
+
+.hero-image img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Features Section */
+.features {
+    padding: 6rem 5%;
+    background-color: var(--white);
+}
+
+.feature-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--background-color);
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
+}
+
+.feature-item i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Gadget Listing Section */
+.gadget-listing {
+    padding: 6rem 5%;
+    background: linear-gradient(135deg, var(--secondary-color), var(--background-color));
+}
+
+.gadget-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.gadget-card {
+    background-color: var(--white);
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.gadget-card:hover {
+    transform: scale(1.05);
+}
+
+.gadget-card img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.gadget-card .pricing button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.gadget-card .pricing button:hover {
+    background-color: var(--accent-color);
+}
+
+/* Contact Section */
+.contact {
+    padding: 6rem 5%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--background-color);
+}
+
+.contact-container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    gap: 2rem;
+}
+
+.contact-form {
+    flex: 1;
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.contact-map {
+    flex: 1;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+}
+
+.contact-form button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .hero, .feature-grid, .gadget-grid {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content, .hero-image {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .hero-cta {
+        justify-content: center;
+    }
+
+    .nav-links, .nav-buttons {
+        display: none; /* Placeholder for mobile menu */
+    }
+}
+
+/* Add a subtle fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--text-secondary);
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--white);
+    padding: 4rem 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+    gap: 2rem;
+}
+
+.footer-logo {
+    margin-bottom: 1rem;
+}
+
+.footer-logo img {
+    height: 60px;
+    max-width: 200px;
+    transition: transform 0.3s ease;
+}
+
+.footer-logo img:hover {
+    transform: scale(1.05);
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+.footer-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.footer-links a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.social-links a {
+    color: var(--text-secondary);
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--background-color);
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+    transform: translateY(-3px);
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.copyright {
+    display: flex;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-top: 1rem;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive Footer */
+@media screen and (max-width: 768px) {
+    .footer-content {
+        max-width: 90%;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .social-links {
+        gap: 1.5rem;
+    }
+}
+/* Add space between the map and the contact form */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+/* Make all three images the same size */
+.gadget-card img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 450px;
+    border-radius: 15px;
+}
