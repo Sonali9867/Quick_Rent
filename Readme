@@ -1,0 +1,66 @@
+# QuickRent: Gadget Rental Platform
+
+## Overview
+QuickRent is a modern web application that allows users to rent various tech gadgets instantly. From laptops to gaming consoles, users can explore, rent, and return high-quality gadgets with ease.
+
+
+## 📸 Screenshots
+
+### Home Page
+![Home Page Screenshot](screenshots/home-page.png)
+
+### Gadgets Listing
+![Gadgets Listing Screenshot](screenshots/gadgets-listing.png)
+
+### Contact Section
+![Contact Section Screenshot](screenshots/contact-section.png)
+
+## ✨ Features
+
+### 1. Wide Variety of Gadgets
+- Browse through multiple tech gadgets
+- Rent laptops, cameras, gaming consoles, and more
+
+### 2. Affordable Pricing
+- Flexible rental plans
+- Transparent weekly pricing
+- No long-term commitments
+
+### 3. Quick Delivery
+- 24-hour delivery guarantee
+- Convenient rental process
+
+## 🛠 Technologies Used
+- HTML5
+- CSS3 (with custom variables and responsive design)
+- JavaScript (Vanilla JS)
+- Remixicon for icons
+
+## 🌟 Key Functionalities
+- Smooth scrolling navigation
+- Responsive design
+- Contact form with basic validation
+- Intersection Observer for scroll animations
+- Interactive UI with hover effects
+
+## 🚧 Setup and Installation
+
+### Prerequisites
+- A modern web browser
+- Text editor (VS Code, Sublime Text, etc.)
+
+### Steps
+1. Clone the repository
+```bash
+git clone https://github.com/yourusername/quickrent.git
+```
+
+2. Navigate to the project directory
+```bash
+cd quickrent
+```
+
+3. Open `index.html` in your browser
+
+## 📧 Contact
+Your Name - sonali82990@gmail.com
